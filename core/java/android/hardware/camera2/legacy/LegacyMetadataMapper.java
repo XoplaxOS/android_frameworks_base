@@ -1100,7 +1100,7 @@ public class LegacyMetadataMapper {
                 return CONTROL_AE_ANTIBANDING_MODE_OFF;
             }
             case Camera.Parameters.ANTIBANDING_50HZ: {
-                return CONTROL_AE_ANTIBANDING_MODE_50HZ;
+                return /* CONTROL_AE_ANTIBANDING_MODE_50HZ */ CONTROL_AE_ANTIBANDING_MODE_AUTO;
             }
             case Camera.Parameters.ANTIBANDING_60HZ: {
                 return CONTROL_AE_ANTIBANDING_MODE_60HZ;

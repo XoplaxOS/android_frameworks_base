@@ -124,7 +124,7 @@ public class CameraBinderDecorator {
             case EUSERS:
                 throw new CameraRuntimeException(MAX_CAMERAS_IN_USE);
             case ENODEV:
-                throw new CameraRuntimeException(CAMERA_DISCONNECTED);
+                throw new CameraRuntimeException(/*CAMERA_DISCONNECTED*/ MAX_CAMERAS_IN_USE);
             case EOPNOTSUPP:
                 throw new CameraRuntimeException(CAMERA_DEPRECATED_HAL);
             case INVALID_OPERATION:

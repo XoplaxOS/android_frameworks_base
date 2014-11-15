@@ -617,7 +617,7 @@ public class LegacyRequestMapper {
                 return Parameters.ANTIBANDING_60HZ;
             }
             case CONTROL_AE_ANTIBANDING_MODE_AUTO: {
-                return Parameters.ANTIBANDING_AUTO;
+                return Parameters.ANTIBANDING_50HZ /* Parameters.ANTIBANDING_AUTO */;
             }
             default: {
                 return null;
