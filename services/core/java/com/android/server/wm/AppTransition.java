@@ -941,8 +941,8 @@ public class AppTransition implements Dump {
                                  : animArray[0];
                      } else {
                           animAttr = enter
-                                  ? WindowAnimation_activityOpenEnterAnimation
-                                  : WindowAnimation_activityOpenExitAnimation;
+				? WindowAnimation_taskOpenEnterAnimation
+                                : WindowAnimation_taskOpenExitAnimation;
                      }
                     break;
                 case TRANSIT_TASK_CLOSE:
@@ -954,8 +954,8 @@ public class AppTransition implements Dump {
                                  : animArray[0];
                      } else {
                           animAttr = enter
-                                  ? WindowAnimation_activityCloseEnterAnimation
-                                  : WindowAnimation_activityCloseExitAnimation;
+				? WindowAnimation_taskCloseEnterAnimation
+                                : WindowAnimation_taskCloseExitAnimation;
                      }
                     break;
                 case TRANSIT_TASK_TO_FRONT:
@@ -967,8 +967,8 @@ public class AppTransition implements Dump {
                                  : animArray[0];
                      } else {
                           animAttr = enter
-                                  ? WindowAnimation_activityToFrontEnterAnimation
-                                  : WindowAnimation_activityToFrontExitAnimation;
+				? WindowAnimation_taskToFrontEnterAnimation
+                                : WindowAnimation_taskToFrontExitAnimation;
                      }
                     break;
                 case TRANSIT_TASK_TO_BACK:
@@ -980,8 +980,8 @@ public class AppTransition implements Dump {
                                  : animArray[0];
                      } else {
                           animAttr = enter
-                                  ? WindowAnimation_activityToBackEnterAnimation
-                                  : WindowAnimation_activityToBackExitAnimation;
+				? WindowAnimation_taskToBackEnterAnimation
+                                : WindowAnimation_taskToBackExitAnimation;
                      }
                     break;
                 case TRANSIT_WALLPAPER_OPEN:
