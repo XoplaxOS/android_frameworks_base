@@ -982,8 +982,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
         updateShowSearchHoldoff();
 
-	addAppCircleSidebar();
-
         try {
             boolean showNav = mWindowManagerService.hasNavigationBar();
             if (DEBUG) Log.v(TAG, "hasNavigationBar=" + showNav);
