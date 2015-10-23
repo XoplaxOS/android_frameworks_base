@@ -4487,7 +4487,7 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
     void reportScrollStateChange(int newState) {
         if (newState != mLastScrollState) {
 		mLastScrollState = newState;
-            if (newState == OnScrollLisener.SCROLL_STATE_IDLE) {
+            if (newState == OnScrollListener.SCROLL_STATE_IDLE) {
                 mListAnimationModeSet =false;
                 mListAnimationMode = 0;
             } else if (!mListAnimationModeSet) {
