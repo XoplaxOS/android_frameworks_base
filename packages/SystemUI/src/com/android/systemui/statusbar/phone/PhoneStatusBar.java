@@ -918,12 +918,6 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         WallpaperManager wm = (WallpaperManager) mContext.getSystemService(
                 Context.WALLPAPER_SERVICE);
 
-	// apply blurred image
-        if (backdropBitmap == null) {
-            backdropBitmap = mBlurredImage;
-            // might still be null
-        }
-
         mKeyguardWallpaper = wm.getKeyguardBitmap();
 
         mUnlockMethodCache = UnlockMethodCache.getInstance(mContext);
@@ -2427,6 +2421,12 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
                 backdropBitmap = mMediaMetadata.getBitmap(MediaMetadata.METADATA_KEY_ALBUM_ART);
                 // might still be null
             }
+        }
+
+	 // apply blurred image
+        if (backdropBitmap == null) {
+            backdropBitmap = mBlurredImage;
+            // might still be null
         }
 
         boolean keyguardVisible = (mState != StatusBarState.SHADE);

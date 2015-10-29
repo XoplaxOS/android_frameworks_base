@@ -30,6 +30,7 @@ import android.graphics.Outline;
 import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
@@ -39,6 +40,7 @@ import android.provider.Settings;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.UserHandle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.MathUtils;
 import android.util.TypedValue;
 import android.view.View;
@@ -999,7 +1001,7 @@ public class StatusBarHeaderView extends RelativeLayout implements View.OnClickL
     }
 
     private void doUpdateStatusBarCustomHeader(final Drawable next, final boolean force) {
-        if (next != null) {
+       if (next != null) {
             if (next != mCurrentBackground) {
                 Log.i(TAG, "Updating status bar header background");
                 mBackgroundImage.setVisibility(View.VISIBLE);
@@ -1009,7 +1011,7 @@ public class StatusBarHeaderView extends RelativeLayout implements View.OnClickL
         } else {
             mCurrentBackground = null;
             mBackgroundImage.setVisibility(View.GONE);
-       }
+        }
     }
 
     private void setNotificationPanelHeaderBackground(final Drawable dw, final boolean force) {
