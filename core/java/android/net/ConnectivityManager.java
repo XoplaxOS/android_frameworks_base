@@ -1007,6 +1007,7 @@ public class ConnectivityManager {
         }
         return 1;
     }
+
     /**
      * Tells the underlying networking system that the caller is finished
      * using the named feature. The interpretation of {@code feature}
