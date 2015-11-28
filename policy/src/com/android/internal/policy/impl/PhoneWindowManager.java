@@ -948,7 +948,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     private ImmersiveModeConfirmation mImmersiveModeConfirmation;
 
     private SystemGesturesPointerEventListener mSystemGestures;
-    private OPGesturesListener mOPGestures;
 
     private EdgeGestureManager.EdgeGestureActivationListener mEdgeGestureActivationListener
             = new EdgeGestureManager.EdgeGestureActivationListener() {
