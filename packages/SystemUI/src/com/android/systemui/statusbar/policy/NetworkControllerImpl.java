@@ -832,7 +832,7 @@ public class NetworkControllerImpl extends BroadcastReceiver
     };
 
     // TODO: Move to its own file.
-    static class WifiSignalController extends
+    public static class WifiSignalController extends
             SignalController<WifiSignalController.WifiState, SignalController.IconGroup> {
         private final WifiManager mWifiManager;
         private final AsyncChannel mWifiChannel;
@@ -912,7 +912,7 @@ public class NetworkControllerImpl extends BroadcastReceiver
                             ? (WifiInfo) intent.getParcelableExtra(WifiManager.EXTRA_WIFI_INFO)
                             : mWifiManager.getConnectionInfo();
                     if (info != null) {
-                        mCurrentState.ssid = getSsid(info);
+                        mCurrentState.ssid = getSsid(mWifiManager, info);
                     } else {
                         mCurrentState.ssid = null;
                     }
@@ -929,13 +929,13 @@ public class NetworkControllerImpl extends BroadcastReceiver
             notifyListenersIfNecessary();
         }
 
-        private String getSsid(WifiInfo info) {
+        public static String getSsid(WifiManager manager, WifiInfo info) {
             String ssid = info.getSSID();
             if (ssid != null) {
                 return ssid;
             }
             // OK, it's not in the connectionInfo; we have to go hunting for it
-            List<WifiConfiguration> networks = mWifiManager.getConfiguredNetworks();
+            List<WifiConfiguration> networks = manager.getConfiguredNetworks();
             int length = networks.size();
             for (int i = 0; i < length; i++) {
                 if (networks.get(i).networkId == info.getNetworkId()) {

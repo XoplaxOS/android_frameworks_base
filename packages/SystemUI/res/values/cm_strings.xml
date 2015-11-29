@@ -342,4 +342,10 @@
 
    <!-- Play queue -->
    <string name="play_queue_extention">Show play queue</string>
+
+    <!-- Pie controls -->
+    <string name="pie_date_format">ccc, dd MMM yyyy</string>
+    <string name="pie_hour_format_12">hh:mm</string>
+    <string name="pie_hour_format_24">HH:mm</string>
+    <string name="pie_am_pm">a</string>
 </resources>
