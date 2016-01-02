@@ -3612,6 +3612,12 @@ public final class Settings {
         public static final String LOCKSCREEN_MEDIA_METADATA = "lockscreen_media_metadata";
 
 	/**
+        * Toast animations
+        * @hide
+        */
+        public static final String TOAST_ANIMATION = "toast_animation";
+
+	/**
          * Custom System Animations
          *
          * @hide
